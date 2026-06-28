@@ -1,0 +1,6 @@
+{
+  "name": "YOV Studio Landing Page",
+  "description": "YOV Studio - Agência digital premium especialista em criação de sites, landing pages de alta performance, tráfego pago, automações e branding de luxo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

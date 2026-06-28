@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Color Palette matching YOV Studio luxury specs */
+  --color-gold-deep: #493723;
+  --color-gold-matte: #624B31;
+  --color-gold-lux: #936F51;
+  --color-gold-metallic: #AD8861;
+  --color-gold-champagne: #CF9F6B;
+  --color-gold-champagne-light: #D9B587;
+  --color-gold-premium: #EACB9C;
+
+  --color-bg-dark: #0B0A08;
+  --color-bg-gray: #1A1815;
+}
+
+/* Base style resets and customizations */
+html {
+  scroll-behavior: smooth;
+  background-color: #0B0A08;
+  color: #F2F2F2;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0A08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1815;
+  border-radius: 4px;
+  border: 2px solid #0B0A08;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #493723;
+}
+
+/* Premium micro-interactions and gradient animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.15;
+    filter: blur(100px);
+  }
+  50% {
+    opacity: 0.25;
+    filter: blur(120px);
+  }
+}
+
+.premium-background-glow {
+  animation: pulseGlow 10s ease-in-out infinite alternate;
+}
+
+/* Gradient text */
+.gradient-gold-text {
+  background: linear-gradient(135deg, #CF9F6B 0%, #EACB9C 50%, #936F51 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-gold-bg {
+  background: linear-gradient(135deg, #493723 0%, #624B31 50%, #936F51 100%);
+}
+
+.gradient-gold-border {
+  border-image: linear-gradient(to right, #493723, #AD8861, #EACB9C, #493723) 1;
+}
+
+/* Glassmorphism */
+.glass-premium {
+  background: rgba(26, 24, 21, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 203, 156, 0.08);
+}
+
+.glass-premium-accent {
+  background: rgba(73, 55, 35, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 203, 156, 0.15);
+}
+
